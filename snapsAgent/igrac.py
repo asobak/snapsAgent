@@ -1,6 +1,6 @@
 class Igrac:
    def __init__(self, ime):
-       self.bodovi = 9
+       self.bodovi = 1
        self.karte = []
        self.ime = ime
        self.naRedu=False

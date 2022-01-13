@@ -110,14 +110,18 @@ def provijeriZvanje(snapsRunda,odabranaKarta):
                     if odabranaKarta.boja == snapsRunda.kartaAduta.boja:
                         if (snapsRunda.p2.rezultatRunde+40)>65:
                              print("Zovem 40 i dosta")
+                             time.sleep(2)
                         else: 
                              print("Zovem 40")
+                             time.sleep(2)
                         bonusBodovi+=40                      
                     else:
                         if (snapsRunda.p2.rezultatRunde+20)>65:
                              print("Zovem 20 i dosta")
+                             time.sleep(2)
                         else:
                              print("Zovem 20")
+                             time.sleep(2)
                         bonusBodovi+=20
                     snapsRunda.p2.rezultatRunde+=bonusBodovi
                     return "dosta"                 
@@ -130,14 +134,18 @@ def provijeriZvanje(snapsRunda,odabranaKarta):
                     if odabranaKarta.boja == snapsRunda.kartaAduta.boja:
                         if (snapsRunda.p2.rezultatRunde+40)>65:
                              print("Zovem 40 i dosta")
+                             time.sleep(2)
                         else: 
                              print("Zovem 40")
+                             time.sleep(2)
                         bonusBodovi+=40                      
                     else:
                         if (snapsRunda.p2.rezultatRunde+20)>65:
                              print("Zovem 20 i dosta")
+                             time.sleep(2)
                         else:
                              print("Zovem 20")
+                             time.sleep(2)
                         bonusBodovi+=20
                     snapsRunda.p2.rezultatRunde+=bonusBodovi
                     return "dosta"
@@ -150,7 +158,6 @@ def pronadjiZvanje(snapsRunda):
         for kartaBabe in babe:
                 for kartaIgraca in snapsRunda.p2.karte:
                         if kartaIgraca.boja == kartaBabe.boja and kartaIgraca.vrijednost == 12:
-                                print("TU JE")
                                 time.sleep(2)
                                 return str(snapsRunda.p2.karte.index(kartaIgraca)+1)                
 

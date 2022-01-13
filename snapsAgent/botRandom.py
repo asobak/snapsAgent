@@ -83,14 +83,18 @@ def provijeriZvanje(snapsRunda,odabranaKarta):
                     if odabranaKarta.boja == snapsRunda.kartaAduta.boja:
                         if (snapsRunda.p2.rezultatRunde+40)>65:
                              print("Zovem 40 i dosta")
+                             time.sleep(2)
                         else: 
                              print("Zovem 40")
+                             time.sleep(2)
                         bonusBodovi+=40                      
                     else:
                         if (snapsRunda.p2.rezultatRunde+20)>65:
                              print("Zovem 20 i dosta")
+                             time.sleep(2)
                         else:
                              print("Zovem 20")
+                             time.sleep(2)
                         bonusBodovi+=20
                     snapsRunda.p2.rezultatRunde+=bonusBodovi
                     return "dosta"                 
@@ -103,14 +107,18 @@ def provijeriZvanje(snapsRunda,odabranaKarta):
                     if odabranaKarta.boja == snapsRunda.kartaAduta.boja:
                         if (snapsRunda.p2.rezultatRunde+40)>65:
                              print("Zovem 40 i dosta")
+                             time.sleep(2)
                         else: 
                              print("Zovem 40")
+                             time.sleep(2)
                         bonusBodovi+=40                      
                     else:
                         if (snapsRunda.p2.rezultatRunde+20)>65:
                              print("Zovem 20 i dosta")
+                             time.sleep(2)
                         else:
                              print("Zovem 20")
+                             time.sleep(2)
                         bonusBodovi+=20
                     snapsRunda.p2.rezultatRunde+=bonusBodovi
                     return "dosta"

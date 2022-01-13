@@ -92,7 +92,8 @@ class Izracun(State):
 			self.agent.snaps.resetirajRundu()
 			self.agent.snaps.nacrtajStol(None,None) 
 		if self.agent.snaps.p1.bodovi<=0 or self.agent.snaps.p2.bodovi<=0:
-			print("Prijatelj "+(self.agent.snaps.p1.ime if self.agent.snaps.p1.bodovi<=0 else self.agent.snaps.p2.ime)  +" je pobijedio!!!")
+			print((self.agent.snaps.p1.ime if self.agent.snaps.p1.bodovi<=0 else self.agent.snaps.p2.ime)  +" je pobijedio!!!")
+			input()
 		else:
 			if self.agent.snaps.p1.naRedu:
 				self.set_next_state("Igrac")
@@ -129,7 +130,7 @@ class Snaps(Agent):
 
         
 if __name__ == '__main__':
-    print("Želite li igrati protiv lošeg bota[1] ili boljeg bota[2]?")
+    print("Želite li igrati protiv lošeg igrača[1] ili boljeg igrača[2]?")
     odabir=""
     while odabir not in ("1","2") :
     	odabir=input()  
