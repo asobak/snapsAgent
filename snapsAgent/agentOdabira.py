@@ -19,7 +19,7 @@ class AgentOdabira(Agent):
 class Ponasanje(OneShotBehaviour):
                 async def run(self):
                         print("POKREČEM AGENTA DOABIRA")
-                        print("Želite li igrati protiv lošeg bota[1] ili boljeg bota[2]?")
+                        print("Želite li igrati protiv lošeg igrača[1] ili boljeg igrača[2]?")
                         odabir=""
                         while odabir not in ("1","2") :
                                 odabir=input()
