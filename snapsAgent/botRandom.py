@@ -11,8 +11,7 @@ import random
 
 
 
-def odigrajRandomKartu(snapsRunda):   
-	        
+def odigrajRandomKartu(snapsRunda):   	        
 	if(snapsRunda.p2.naRedu):
 		if unesiAkcijuPrvi(snapsRunda)=="D":
 			return "dosta"	

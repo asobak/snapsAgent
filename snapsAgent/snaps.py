@@ -226,7 +226,7 @@ class Snaps:
     def unesiAkcijuPrvi(self,prviIgrac):
         while 1:           
             akcija = input("Odaberi kartu "+(self.p1.ime if prviIgrac else self.p2.ime)+": ")
-            if akcija == "D":
+            if akcija == "":
                 if prviIgrac:
                 	self.bodovi=self.provjeriDosta(True)
                 if not prviIgrac:
@@ -302,8 +302,6 @@ class Snaps:
                     self.p1.rezultatRunde+=bonusBodovi
                     if odgovor=="Y":
                         return "dosta"
-                    
-                
         else:
             if odabranaKarta.vrijednost==11:
                 postojiKralj=False
@@ -393,7 +391,7 @@ class Snaps:
         self.cls()
         brojac=0
         print()
-        print("{:>37}:{:<37}{:>10}".format(self.p2.ime,self.p2.rezultatRunde,self.p2.bodovi),end=" ")
+        print("{:>37}:{:<37}{:>10}".format(self.p2.ime,"",self.p2.bodovi),end=" ")
         print()
         print("-"*85)
         print()

@@ -191,8 +191,8 @@ def odigrajNajboljuKartuDrugi(snapsRunda):
         for karta in snapsRunda.p2.karte:
                 if karta.vrijednost>snapsRunda.p1OdabranaKarta.vrijednost and karta.boja==snapsRunda.p1OdabranaKarta.boja:
                         jaceKarte.append(karta)
-        #Ako ima  kartu babe i kralja zajedno s asom ili cenarom baca asa ili cenara
-        if any(x.vrijednost == 11 for x in jaceKarte) and any(x.vrijednost == 12 for x in jaceKarte) and (any(x.vrijednost == 13 for x in jaceKarte) or any(x.vrijednost == 14 for x in jaceKarte)):
+        #Ako ima  kartu dame i kralja zajedno s asom ili desetkom baca asa ili desetku
+        if any(x.vrijednost == 11 for x in jaceKarte) and any(x.vrijednost == 12 for x in jaceKarte) and any(x.vrijednost == 13 for x in jaceKarte) or any(x.vrijednost == 14 for x in jaceKarte):
                 for karta in jaceKarte:
                         if karta.vrijednost == 13 or karta.vrijednost == 14:
                                 return str(snapsRunda.p2.karte.index(karta)+1)
@@ -200,19 +200,19 @@ def odigrajNajboljuKartuDrugi(snapsRunda):
         najmanjaNajaca = min(jaceKarte,key=attrgetter('vrijednost'),default=None)
        
         
-        #Nema jacu koja nije adut onda idemo a je karta cenar il jaca i nije adut
+        #Nema jacu koja nije adut, onda se gleda je li karta desetka il jaca i nije adut
         if najmanjaNajaca==None and not snapsRunda.mus:              
                 if snapsRunda.p1OdabranaKarta.vrijednost>12 and not snapsRunda.kartaAduta.boja==snapsRunda.p1OdabranaKarta.boja:
                         for karta in snapsRunda.p2.karte:
-                                #a imamo adut i a je on jaci od dececa
+                                #ako imamo adut i ako je on jaci od decka
                                 if karta.boja == snapsRunda.kartaAduta.boja and karta.vrijednost > 10:                              
-                                        #a je taj adut baba il kralj
+                                        #je li taj adut dama il kralj
                                         if karta.vrijednost == 11:
                                                 baba=True
                                         if karta.vrijednost == 12:
                                                 kralj=True                                      
                                         jaceKarte.append(karta)
-                        #ak ima adut onda gledaj a su solo baba i deda ili nisu
+                        #ako ima adut onda gledaj je su li dama i kralj jedini ili nisu
                         if len(jaceKarte)>0:
                                 if baba and kralj and len(jaceKarte)>2:
                                         najmanjaNajaca = max(jaceKarte,key=attrgetter('vrijednost'),default=None)
