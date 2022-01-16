@@ -1,2 +1,2 @@
 # snapsAgent
-python Snaps bot
+Python agent that plays the Snaps card game
