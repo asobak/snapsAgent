@@ -1,0 +1,2 @@
+﻿Pokrenite agentOdabira.py > odaberite težinu unosom broja 1 ili 2 >
+unesite svoje ime > unesite ime računala > karte se bacaju brojevima od 1 do 5 , igra se zatvara upisom slova Z ,"Dosta" se zove upisom slova D, zvanje se zove odabirom dame ili kralja.

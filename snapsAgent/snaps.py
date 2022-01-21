@@ -226,7 +226,7 @@ class Snaps:
     def unesiAkcijuPrvi(self,prviIgrac):
         while 1:           
             akcija = input("Odaberi kartu "+(self.p1.ime if prviIgrac else self.p2.ime)+": ")
-            if akcija == "":
+            if akcija == "D":
                 if prviIgrac:
                 	self.bodovi=self.provjeriDosta(True)
                 if not prviIgrac:

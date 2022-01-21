@@ -6,7 +6,7 @@ class Karta:
              "\u2660",
              "\u2663"]
     
-    vrijednosti = ["Dečko", "Baba",
+    vrijednosti = ["Dečko", "Dama",
               "Kralj","10", "As"]
 
     def __init__(self, v, s):
